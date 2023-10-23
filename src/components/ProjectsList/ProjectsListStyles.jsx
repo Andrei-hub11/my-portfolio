@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ProjectsSection = styled.section`
-  padding: 5rem;
+  padding: 7rem 0;
   overflow-x: hidden;
 `;
 
@@ -64,21 +64,23 @@ export const ProjectsContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 40rem;
   gap: 4rem;
+  padding: 1rem;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 36rem));
-    grid-auto-rows: 35rem;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 30rem));
+    grid-auto-rows: 30rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 36rem));
-    grid-auto-rows: 35rem;
+    grid-auto-rows: 30rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
     grid-template-columns: repeat(auto-fill, minmax(30rem, 40rem));
+    grid-auto-rows: 35rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.bigDesktopUp}) {

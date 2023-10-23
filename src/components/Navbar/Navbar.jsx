@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-scroll";
 
 import {
   Header,
@@ -28,7 +29,7 @@ import {
 
 import SocialIcon from "../SocialIcon/SocialIcon";
 
-import Anakin from "../../images/anakin.jpg";
+import Andrey from "../../images/anakin.jpg";
 import InstagramIcon from "../../images/bxl-instagram.svg";
 import TwitterIcon from "../../images/bxl-twitter.svg";
 
@@ -43,7 +44,7 @@ const list = [
   },
   {
     id: "4",
-    text: "Portifólio",
+    text: "Projetos",
   },
   {
     id: "5",
@@ -92,12 +93,20 @@ function Navbar({ onClick }) {
         <Logo>Andrey</Logo>
         <NavBar $isOpen={isOpen}>
           {list?.map((l) => (
-            <li key={l.id}>
+            <Link
+              key={l.id}
+              activeClass="active"
+              to={l.text}
+              spy={true}
+              smooth={true}
+              duration={100}
+            >
               <NavLink href={l.text} key={l.id}>
                 {l.text}
               </NavLink>
-            </li>
+            </Link>
           ))}
+
           <ToggleModeContainer onClick={handleToggle}>
             <ToggleLabel>
               <MoonIcon />
@@ -115,7 +124,7 @@ function Navbar({ onClick }) {
       <InitialBox>
         <InitialBoxCard>
           <InitialBoxCardImg>
-            <ImageSection src={Anakin} alt=""></ImageSection>
+            <ImageSection src={Andrey} alt=""></ImageSection>
           </InitialBoxCardImg>
           <CardInfo>
             <CardText>Andrei Rodrigues</CardText>
@@ -125,7 +134,7 @@ function Navbar({ onClick }) {
                 <SocialIcon
                   $primary={true}
                   src={InstagramIcon}
-                  alt=""
+                  alt="instagram-icon"
                   onClick={() => redirectingPage(0)}
                 />
               </a>
@@ -133,7 +142,7 @@ function Navbar({ onClick }) {
                 <SocialIcon
                   $primary={true}
                   src={TwitterIcon}
-                  alt=""
+                  alt="twitter-icon"
                   onClick={() => redirectingPage(0)}
                 />
               </a>

@@ -20,15 +20,19 @@ export const Header = styled(motion.header)`
   width: 100%;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     overflow-x: hidden !important;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
-    min-height: 100vh;
+    min-height: 100%;
     width: 100%;
     overflow-x: hidden !important;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.tabletLandscapeUp}) {
+    min-height: 100vh;
   }
 `;
 
@@ -49,8 +53,8 @@ export const NavBar = styled.nav`
     position: absolute;
     top: 0;
     right: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
+    height: 100%;
     width: 300px;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
     background: ${({
@@ -69,7 +73,7 @@ export const NavBar = styled.nav`
     top: 0;
     right: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
     width: 300px;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     background: ${({
@@ -99,7 +103,7 @@ export const NavBar = styled.nav`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.p`
   font-size: 1.5rem;
   padding: 0.4rem 0.8rem;
   border-radius: 0.2rem;
@@ -108,6 +112,7 @@ export const NavLink = styled.a`
       colors: { clara },
     },
   }) => clara};
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
@@ -179,7 +184,7 @@ export const SunIcon = styled(FontAwesomeIcon).attrs({
   font-size: 1.5rem;
 `;
 
-export const Logo = styled.a`
+export const Logo = styled.p`
   font-size: 2rem;
   padding: 0 0.9rem;
   color: ${({
@@ -251,11 +256,12 @@ export const InitialBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5rem;
 `;
 
 export const InitialBoxCard = styled.div`
   position: relative;
-  margin-top: 10rem;
+  /*   margin-top: 10rem; */
   width: 30rem;
   height: 40rem;
   background: ${({
@@ -272,11 +278,12 @@ export const InitialBoxCard = styled.div`
   transition: 0.3s;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    width: 20rem;
-    height: 25rem;
+    width: 15rem;
+    height: 20rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
+    margin-top: 1rem;
     width: 20rem;
     height: 25rem;
   }
@@ -308,6 +315,11 @@ export const InitialBoxCardImg = styled.div`
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
     width: 100%;
+    height: 10rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
+    width: 100%;
     height: 14rem;
   }
 
@@ -327,17 +339,23 @@ export const ImageSection = styled.img`
   border-radius: 50%;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    width: 50%;
+    width: 7rem;
+    height: 7rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
+    width: 10rem;
     height: 10rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
-    width: 55%;
+    width: 13rem;
     height: 13rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.bigDesktopUp}) {
-    height: 16rem;
+    width: 15rem;
+    height: 15rem;
   }
 `;
 
@@ -365,15 +383,15 @@ export const CardText = styled.div`
   transition: 0.3s;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
     font-size: 1.7rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
-    font-size: ${({
-      theme: {
-        fontSize: { tabletPortraitUp },
-      },
-    }) => `${tabletPortraitUp[1]}rem`};
+    font-size: 2rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletLandscapeUp}) {
@@ -405,6 +423,14 @@ export const CardTextProfi = styled(CardText)`
   font-size: 1.8rem;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    font-size: ${({
+      theme: {
+        fontSize: { sPhone },
+      },
+    }) => `${sPhone[0]}rem`};
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
     font-size: ${({
       theme: {
         fontSize: { sPhone },
@@ -452,6 +478,10 @@ export const CardSocial = styled.div`
   font-size: 2.5rem;
   column-gap: 1rem;
   margin-top: 0.5rem;
+
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    margin-top: 0;
+  }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
     column-gap: 1.5rem;

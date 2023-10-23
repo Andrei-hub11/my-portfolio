@@ -4,7 +4,7 @@ import { ProjectBox, ProjectImage, ProjectText } from "./ProjectStyle";
 import Button from "../Button/Button";
 import GithubIcon from "../../images/bxl-github.svg";
 
-function Project({ project }) {
+function Project({ project, onClick }) {
   const variants = {
     initial: { opacity: 0, y: -100 },
     hover: {
@@ -21,10 +21,14 @@ function Project({ project }) {
   return (
     <ProjectBox whileInView="hover" initial="initial" variants={variants}>
       <div className="section-projects__box">
-        <ProjectImage src={project.imageUrl} />
+        <ProjectImage src={project.imageUrl} alt={project.title} />
         <ProjectText>{project.title}</ProjectText>
 
-        <Button>
+        <Button
+          onClick={() => {
+            onClick(project.githubLink);
+          }}
+        >
           GitHub
           <img
             className="card__social-icons about--icon"
@@ -43,6 +47,7 @@ Project.propTypes = {
     title: PropTypes.string.isRequired,
     githubLink: PropTypes.string.isRequired,
   }).isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Project;

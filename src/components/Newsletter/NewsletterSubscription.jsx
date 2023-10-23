@@ -38,6 +38,18 @@ function NewsletterSubscription() {
     actions.resetForm();
   };
 
+  const variants = {
+    initial: { opacity: 0 },
+    hover: {
+      opacity: [0, 0.3, 0.5, 0.7, 1],
+      transition: { duration: 1.5 },
+    },
+    exit: {
+      opacity: 0,
+      transition: { duration: 1 },
+    },
+  };
+
   const {
     values,
     errors,
@@ -52,7 +64,7 @@ function NewsletterSubscription() {
     onSubmit,
   });
   return (
-    <Subscription>
+    <Subscription whileInView="hover" initial="initial" variants={variants}>
       <SubscriptionBox>
         <SubscriptionBoxSecondary>
           <SubscriptionBoxSecondaryInfo>

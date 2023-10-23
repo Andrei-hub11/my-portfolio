@@ -17,6 +17,31 @@ html {
   font-size: 62.5%;
 }
 
+ html::-webkit-scrollbar-track {
+  background: ${({
+    theme: {
+      colors: { fundoScroll },
+    },
+  }) => fundoScroll};
+  transition: 0.3s;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: ${({
+    theme: {
+      colors: { scroll },
+    },
+  }) => scroll};
+  border-radius: 5rem;
+  transition: 0.3s;
+
+  scrollbar-color:  ${({
+    theme: {
+      colors: { scroll },
+    },
+  }) => scroll};
+} 
+
 body {
   font-family: ${({ theme: { fonts } }) => fonts[0]};
   background:  ${({

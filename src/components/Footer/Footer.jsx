@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FooterBox,
   FooterLogo,
@@ -17,8 +16,20 @@ function Footer() {
     // Implemente a lógica de redirecionamento aqui
   };
 
+  const variants = {
+    initial: { opacity: 0 },
+    hover: {
+      opacity: [0, 0.3, 0.5, 0.7, 1],
+      transition: { duration: 1.5 },
+    },
+    exit: {
+      opacity: 0,
+      transition: { duration: 1 },
+    },
+  };
+
   return (
-    <FooterSection>
+    <FooterSection whileInView="hover" initial="initial" variants={variants}>
       <FooterBox>
         <FooterLogo>
           Portf<span>ólio.</span>
@@ -29,22 +40,18 @@ function Footer() {
         <p className="text">&copy; Copyright 2022. All rights reserved</p>
         <SocialMedia>
           <li>
-            <a href="#">
-              <SocialIcon
-                src={InstagramIcon}
-                alt=""
-                onClick={() => redirectingPage(0)}
-              />
-            </a>
+            <SocialIcon
+              src={InstagramIcon}
+              alt=""
+              onClick={() => redirectingPage(0)}
+            />
           </li>
           <li>
-            <a href="#">
-              <SocialIcon
-                src={TwitterIcon}
-                alt=""
-                onClick={() => redirectingPage(0)}
-              />
-            </a>
+            <SocialIcon
+              src={TwitterIcon}
+              alt=""
+              onClick={() => redirectingPage(0)}
+            />
           </li>
         </SocialMedia>
       </FooterBox>

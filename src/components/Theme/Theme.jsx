@@ -11,6 +11,8 @@ export const lightTheme = {
     fundoScroll: "#fff",
     logo: "rgba(0, 0, 0, 0.4)",
     scroll: "#085f07",
+    btn_primario: "#54c627",
+    btn_secundario: "#fff",
   },
   fonts: ["Raleway, sans-serif", "Dosis, sans-serif"],
   background: {
@@ -67,6 +69,8 @@ export const darkTheme = {
     fundoScroll: "#10121e",
     logo: "#fff",
     scroll: "#5a5f7b",
+    btn_primario: "#091a7a",
+    btn_secundario: "#fff",
   },
   fonts: ["Raleway, sans-serif", "Dosis, sans-serif"],
   background: {

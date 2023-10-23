@@ -27,7 +27,7 @@ export const Img = styled.img`
     }) => `${sPhone[1]}rem`};
   }
 
-  @media (min-width: ${(props) => props.theme.breakPoints.tabletLandscapeUp}) {
+  @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
     height: 2.5rem;
   }
 

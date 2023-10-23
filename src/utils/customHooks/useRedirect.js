@@ -1,14 +1,14 @@
 import { useCallback } from "react";
 
-const SOCIAL_MEDIA_URLS = {
+/* const SOCIAL_MEDIA_URLS = {
   facebook: "https://www.facebook.com",
   twitter: "https://www.twitter.com",
-  // Adicione outras redes sociais e URLs aqui
-};
+  
+}; */
 
-function useSocialRedirect() {
-  const onRedirect = useCallback((socialMedia) => {
-    const url = SOCIAL_MEDIA_URLS[socialMedia];
+function useRedirect() {
+  const onRedirect = useCallback((url) => {
+    /* const url = SOCIAL_MEDIA_URLS[socialMedia]; */
     if (url) {
       /*  window.location.href = url; */
       window.open(url, "_blank");
@@ -20,4 +20,4 @@ function useSocialRedirect() {
   };
 }
 
-export default useSocialRedirect;
+export default useRedirect;

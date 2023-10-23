@@ -9,6 +9,10 @@ export const ProjectBox = styled(motion.div)`
   }) => principal};
   padding: 2rem;
   border-radius: 3rem;
+
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    padding: 1rem;
+  }
 `;
 
 export const ProjectImage = styled.img`
@@ -17,6 +21,19 @@ export const ProjectImage = styled.img`
   object-fit: cover;
   object-position: center;
   border-radius: 1rem;
+
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    object-fit: contain;
+    height: 15rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
+    height: 15rem;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
+    height: 17rem;
+  }
 
   @media (min-width: ${(props) => props.theme.breakPoints.bigDesktopUp}) {
     height: 20rem;
@@ -34,4 +51,8 @@ export const ProjectText = styled.p`
       colors: { clara },
     },
   }) => clara};
+
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    font-size: 1.2rem;
+  }
 `;

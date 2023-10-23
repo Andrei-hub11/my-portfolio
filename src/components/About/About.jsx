@@ -9,13 +9,14 @@ import {
   MainBox,
 } from "./AboutStyle";
 
-import aboutImage from "../../images/anakin.jpg";
+import aboutImage from "../../images/cardImage-.png";
 import DownloadIcon from "../../images/download.svg";
 import Button from "../Button/Button";
+import pdf from "../../utils/curriculo.pdf";
 
 function About() {
   const handleDownloadPDF = () => {
-    let pdfURL = "../../utils/curriculo-andrei.pdf";
+    let pdfURL = pdf;
 
     let link = document.createElement("a");
     link.href = pdfURL;
@@ -56,14 +57,14 @@ function About() {
   };
 
   return (
-    <AboutSection>
+    <AboutSection id="Sobre">
       <MainBox>
         <AboutBoxPrimary
           whileInView="hover"
           initial="initial"
           variants={variantPrimaryAbout}
         >
-          <AboutImage src={aboutImage} />
+          <AboutImage src={aboutImage} alt="imagem-sobre" />
         </AboutBoxPrimary>
 
         <AboutBoxSecondary
@@ -83,7 +84,7 @@ function About() {
             resultados de alta qualidade para cada projeto que assumo. Vamos
             trabalhar juntos para criar algo incrível!
           </AboutTextStory>
-          <Button onClick={handleDownloadPDF}>
+          <Button onClick={handleDownloadPDF} $primary={true}>
             Download CV <AboutIcon src={DownloadIcon} />
           </Button>
         </AboutBoxSecondary>

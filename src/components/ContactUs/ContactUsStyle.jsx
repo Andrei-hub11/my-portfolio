@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ContactSection = styled.section`
-  padding: 10rem;
+  padding: 7rem 0;
   overflow-x: hidden;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
@@ -162,7 +162,7 @@ export const FormInput = styled.input`
     },
   }) => clara};
   padding-left: 1rem;
-  caret-color: #3366ff;
+  caret-color: #fff;
 
   &::placeholder {
     color: ${({
@@ -199,6 +199,12 @@ export const FormInput = styled.input`
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
+    font-size: ${({
+      theme: {
+        fontSize: { tabletPortraitUp },
+      },
+    }) => `${tabletPortraitUp[0]}rem`};
+
     width: 35rem;
   }
 
@@ -229,6 +235,14 @@ export const FormMsg = styled.div`
   font-weight: 700;
   color: #ff0000;
   bottom: -1rem;
+
+  @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
+    font-size: ${({
+      theme: {
+        fontSize: { tabletPortraitUp },
+      },
+    }) => `${tabletPortraitUp[0]}rem`};
+  }
 `;
 
 export const LabelForm = styled.label`
@@ -268,6 +282,22 @@ export const LabelForm = styled.label`
         },
       }) => `${sPhone[0]}rem`};
     }
+
+    @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
+      font-size: ${({
+        theme: {
+          fontSize: { sPhone },
+        },
+      }) => `${sPhone[0]}rem`};
+    }
+
+    @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
+      font-size: ${({
+        theme: {
+          fontSize: { tabletPortraitUp },
+        },
+      }) => `${tabletPortraitUp[0]}rem`};
+    }
   }
 
   ${FormInput}:focus + & {
@@ -275,7 +305,7 @@ export const LabelForm = styled.label`
     left: 1rem;
     font-size: 1rem;
     font-weight: 400;
-    color: #1a73e8;
+    color: #fff;
   }
 `;
 
@@ -319,6 +349,11 @@ export const Textarea = styled.textarea`
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
+    font-size: ${({
+      theme: {
+        fontSize: { tabletPortraitUp },
+      },
+    }) => `${tabletPortraitUp[0]}rem`};
     width: 35rem;
   }
 

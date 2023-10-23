@@ -1,6 +1,8 @@
-/* import React from "react"; */
+import { useEffect } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 import { fieldsMessage } from "../../utils/formFields/fields";
 import {
@@ -18,6 +20,8 @@ import {
 } from "./ContactUsStyle";
 
 function ContactUs() {
+  useEffect(() => emailjs.init("PLWT1-aym7fOAhPsx"), []);
+
   const initialValues = Object.fromEntries(
     fieldsMessage.map((field) => [field.name, field.initialValue || ""])
   );
@@ -34,6 +38,21 @@ function ContactUs() {
   );
 
   const onSubmit = async (values, actions) => {
+    const { name, email, textarea } = values;
+
+    emailjs.send(
+      "service_x6ers2k",
+      "template_q56bb4k",
+      {
+        name: "andrey",
+        sender: name,
+        sender_email: email,
+        message: textarea,
+      },
+      "PLWT1-aym7fOAhPsx"
+    );
+
+    toast.success("Mensagem recebida. Responderei em breve 😉");
     actions.resetForm();
   };
 
@@ -75,7 +94,7 @@ function ContactUs() {
   };
 
   return (
-    <ContactSection>
+    <ContactSection id="Contato">
       <ContactTitle
         whileInView="animate"
         initial="initial"

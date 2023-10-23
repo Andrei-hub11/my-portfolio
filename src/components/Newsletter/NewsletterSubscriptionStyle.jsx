@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const Subscription = styled.div`
+export const Subscription = styled(motion.section)`
   position: relative;
   overflow: hidden;
   padding: 7rem 0;
@@ -167,27 +168,6 @@ export const SubscriptionHeading = styled.h1`
   }
 `;
 
-/* export const SubscriptionBoxSecondaryHeading = styled.h2`
-  font-size: 2rem;
-  margin-top: 2rem;
-
-  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    font-size: 1.7rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
-    font-size: 1.7rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakPoints.bigDesktopUp}) {
-    font-size: ${({
-      theme: {
-        fontSize: { bigDesktopUp },
-      },
-    }) => `${bigDesktopUp[1]}rem`};
-  }
-`; */
-
 export const InputSubscription = styled.input`
   display: inline-block;
   padding: 0.9rem 1.5rem;
@@ -204,6 +184,11 @@ export const InputSubscription = styled.input`
   font-size: 1.5rem;
   font-weight: 500;
   outline: none;
+  caret-color: ${({
+    theme: {
+      colors: { principal },
+    },
+  }) => principal};
 
   &::placeholder {
     color: ${({
@@ -285,11 +270,7 @@ export const BtnSubscription = styled.button`
   display: inline-block;
   padding: 0.9rem 1.75rem;
   border-radius: 1.7rem;
-  background-color: ${({
-    theme: {
-      colors: { secundaria },
-    },
-  }) => secundaria};
+  background-color: #000;
   color: #fff;
   font-size: 1.5rem;
   letter-spacing: 0.04rem;
@@ -297,7 +278,6 @@ export const BtnSubscription = styled.button`
   text-align: center;
   border: none;
   outline: none;
-  font-family: var(--font-family-principal);
   cursor: pointer;
   transition: 0.3s;
 

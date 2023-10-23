@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const FooterSection = styled.footer`
+export const FooterSection = styled(motion.footer)`
   padding: 4rem 0;
 
   p {

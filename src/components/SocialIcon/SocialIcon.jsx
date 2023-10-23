@@ -9,7 +9,7 @@ SocialIcon.propTypes = {
   $primary: PropTypes.bool,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 export default SocialIcon;
