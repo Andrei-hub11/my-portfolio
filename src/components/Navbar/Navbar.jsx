@@ -29,9 +29,10 @@ import {
 
 import SocialIcon from "../SocialIcon/SocialIcon";
 
-import Andrey from "../../images/anakin.jpg";
+import Andrey from "../../images/image-profile.jpg";
 import InstagramIcon from "../../images/bxl-instagram.svg";
-import TwitterIcon from "../../images/bxl-twitter.svg";
+import LinkedinIcon from "../../images/bxl-linkedin-square.svg";
+import useRedirect from "../../utils/customHooks/useRedirect";
 
 const list = [
   {
@@ -53,6 +54,7 @@ const list = [
 ];
 
 function Navbar({ onClick }) {
+  const { onRedirect } = useRedirect();
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -76,8 +78,8 @@ function Navbar({ onClick }) {
     onClick();
   };
 
-  const redirectingPage = (id) => {
-    return id;
+  const handleRedirect = (url) => {
+    onRedirect(url);
   };
 
   return (
@@ -130,22 +132,25 @@ function Navbar({ onClick }) {
             <CardText>Andrei Rodrigues</CardText>
             <CardTextProfi>Desenvolvedor Web</CardTextProfi>
             <CardSocial>
-              <a href="">
-                <SocialIcon
-                  $primary={true}
-                  src={InstagramIcon}
-                  alt="instagram-icon"
-                  onClick={() => redirectingPage(0)}
-                />
-              </a>
-              <a href="">
-                <SocialIcon
-                  $primary={true}
-                  src={TwitterIcon}
-                  alt="twitter-icon"
-                  onClick={() => redirectingPage(0)}
-                />
-              </a>
+              <SocialIcon
+                $primary={true}
+                src={InstagramIcon}
+                alt="instagram-icon"
+                onClick={() =>
+                  handleRedirect("https://www.instagram.com/andrey_b22/")
+                }
+              />
+
+              <SocialIcon
+                $primary={true}
+                src={LinkedinIcon}
+                alt="linkedin-icon"
+                onClick={() =>
+                  handleRedirect(
+                    "https://www.linkedin.com/in/andrei-rodrigues-a7949120b/"
+                  )
+                }
+              />
             </CardSocial>
           </CardInfo>
         </InitialBoxCard>

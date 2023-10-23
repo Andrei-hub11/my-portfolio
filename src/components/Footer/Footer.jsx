@@ -8,12 +8,14 @@ import {
 import SocialIcon from "../SocialIcon/SocialIcon";
 
 import InstagramIcon from "../../images/bxl-instagram.svg";
-import TwitterIcon from "../../images/bxl-twitter.svg";
+import LinkedinIcon from "../../images/bxl-linkedin-square.svg";
+import useRedirect from "../../utils/customHooks/useRedirect";
 
 function Footer() {
-  // Função para redirecionar para a página correspondente com base no ID passado
-  const redirectingPage = (id) => {
-    // Implemente a lógica de redirecionamento aqui
+  const { onRedirect } = useRedirect();
+
+  const handleRedirect = (url) => {
+    onRedirect(url);
   };
 
   const variants = {
@@ -43,14 +45,20 @@ function Footer() {
             <SocialIcon
               src={InstagramIcon}
               alt=""
-              onClick={() => redirectingPage(0)}
+              onClick={() =>
+                handleRedirect("https://www.instagram.com/andrey_b22/")
+              }
             />
           </li>
           <li>
             <SocialIcon
-              src={TwitterIcon}
+              src={LinkedinIcon}
               alt=""
-              onClick={() => redirectingPage(0)}
+              onClick={() =>
+                handleRedirect(
+                  "https://www.linkedin.com/in/andrei-rodrigues-a7949120b/"
+                )
+              }
             />
           </li>
         </SocialMedia>

@@ -74,15 +74,15 @@ function About() {
         >
           <AboutText>Sobre mim</AboutText>
           <AboutTextStory>
-            Sou Andrei Rodrigues, um entusiasta do mundo digital apaixonado por
-            transformar ideias em realidade digital. Embora eu ainda não tenha
-            experiência profissional, minhas habilidades em JavaScript,
-            CSS/SCSS, HTML, React, Express e MongoDB me capacitam para criar
-            aplicações web cativantes. Também tenho conhecimento básico em
-            Docker e Figma, o que amplia minha versatilidade. Estou ansioso para
-            iniciar minha jornada profissional e estou comprometido em entregar
-            resultados de alta qualidade para cada projeto que assumo. Vamos
-            trabalhar juntos para criar algo incrível!
+            Um entusiasta do mundo digital apaixonado por transformar ideias em
+            realidade digital. Embora eu ainda não tenha experiência
+            profissional, minhas habilidades em JavaScript, CSS/SCSS, HTML,
+            React, Express e MongoDB me capacitam para criar aplicações web
+            cativantes. Também tenho conhecimento básico em Docker e Figma, o
+            que amplia minha versatilidade. Estou ansioso para iniciar minha
+            jornada profissional e estou comprometido em entregar resultados de
+            alta qualidade para cada projeto que assumo. Vamos trabalhar juntos
+            para criar algo incrível!
           </AboutTextStory>
           <Button onClick={handleDownloadPDF} $primary={true}>
             Download CV <AboutIcon src={DownloadIcon} />

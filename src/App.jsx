@@ -31,7 +31,7 @@ function App() {
         <Services />
         <ProjectsList />
         <ContactUs />
-        <NewsletterSubscription />
+        {/*  <NewsletterSubscription /> */}
         <Footer />
         <ScrollToTop />
       </>

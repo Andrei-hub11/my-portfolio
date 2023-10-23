@@ -5,6 +5,7 @@ export const Img = styled.img`
     $primary ? iconColors.light : iconColors.primary};
   height: 2.8rem;
   transition: 0.3s;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.2);
