@@ -40,8 +40,12 @@ export const Navegation = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5px;
+  padding: 2rem 0.5rem;
   width: 100%;
+
+  @media (min-width: ${(props) => props.theme.breakPoints.tabletLandscapeUp}) {
+    padding: 2rem 4rem;
+  }
 `;
 
 export const NavBar = styled.nav`

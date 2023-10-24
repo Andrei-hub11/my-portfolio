@@ -22,7 +22,7 @@ const projectsData = [
   {
     title: "ui de um pagina de registro e login",
     imageUrl: Project2,
-    githubLink: "link-para-o-github-do-terceiro-projeto",
+    githubLink: "https://github.com/Andrei-hub11/login-page",
   },
   {
     title: "app de lista de contatos",
