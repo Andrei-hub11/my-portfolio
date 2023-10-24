@@ -39,7 +39,7 @@ function Footer() {
         {/* <a href="#" className="footer__logo">
           Portf<span>ólio.</span>
         </a> */}
-        <p className="text">&copy; Copyright 2022. All rights reserved</p>
+        <p className="text">&copy; Copyright 2023. All rights reserved</p>
         <SocialMedia>
           <li>
             <SocialIcon
