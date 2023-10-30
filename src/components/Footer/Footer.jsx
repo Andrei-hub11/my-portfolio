@@ -46,7 +46,7 @@ function Footer() {
               src={GmailIcon}
               alt=""
               onClick={() =>
-                handleRedirect("https://www.instagram.com/andrey_b22/")
+                handleRedirect("mailto:andreirodrigues794@gmail.com")
               }
             />
           </li>
