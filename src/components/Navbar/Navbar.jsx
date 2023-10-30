@@ -30,7 +30,7 @@ import {
 import SocialIcon from "../SocialIcon/SocialIcon";
 
 import Andrey from "../../images/image-profile.jpg";
-import InstagramIcon from "../../images/bxl-instagram.svg";
+import GmailIcon from "../../images/bxl-gmail.svg";
 import LinkedinIcon from "../../images/bxl-linkedin-square.svg";
 import useRedirect from "../../utils/customHooks/useRedirect";
 
@@ -134,10 +134,10 @@ function Navbar({ onClick }) {
             <CardSocial>
               <SocialIcon
                 $primary={true}
-                src={InstagramIcon}
+                src={GmailIcon}
                 alt="instagram-icon"
                 onClick={() =>
-                  handleRedirect("https://www.instagram.com/andrey_b22/")
+                  handleRedirect("mailto:andreirodrigues794@gmail.com")
                 }
               />
 

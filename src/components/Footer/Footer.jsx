@@ -7,7 +7,7 @@ import {
 
 import SocialIcon from "../SocialIcon/SocialIcon";
 
-import InstagramIcon from "../../images/bxl-instagram.svg";
+import GmailIcon from "../../images/bxl-gmail.svg";
 import LinkedinIcon from "../../images/bxl-linkedin-square.svg";
 import useRedirect from "../../utils/customHooks/useRedirect";
 
@@ -43,7 +43,7 @@ function Footer() {
         <SocialMedia>
           <li>
             <SocialIcon
-              src={InstagramIcon}
+              src={GmailIcon}
               alt=""
               onClick={() =>
                 handleRedirect("https://www.instagram.com/andrey_b22/")
