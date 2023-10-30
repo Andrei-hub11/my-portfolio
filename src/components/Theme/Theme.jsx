@@ -1,5 +1,8 @@
-import contactImage1 from "../../images/imageformContact-corlight.jpg";
-import contactImage2 from "../../images/imageformContact-corblack.jpg";
+import contactImageLight_media from "../../images/imageformContact-corlight-media.jpg";
+import contactImageLight_pequena from "../../images/imageformContact-corlight-pequena.jpg";
+
+import contactImageDark_media from "../../images/imageformContact-corblack-media.jpg";
+import contactImageDark_pequena from "../../images/imageformContact-corblack-pequena.jpg";
 
 export const lightTheme = {
   colors: {
@@ -39,7 +42,7 @@ export const lightTheme = {
   },
   headingColor: "hsl(var(--hue-1), 61%, 24%)",
   images: {
-    form: contactImage1,
+    form: [contactImageLight_pequena, contactImageLight_media],
     // svgFooter: "url(/images/wave.svg)",
   },
   breakPoints: {
@@ -97,7 +100,7 @@ export const darkTheme = {
   },
   headingColor: "hsl(var(--hue-1), 61%, 24%)",
   images: {
-    form: contactImage2,
+    form: [contactImageDark_pequena, contactImageDark_media],
     // svgFooter: "url(/images/wave2.svg)",
   },
   breakPoints: {

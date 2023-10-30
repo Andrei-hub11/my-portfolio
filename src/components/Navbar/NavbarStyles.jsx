@@ -3,17 +3,13 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-import BackgroundHeader from "../../images/imageAbout-pequena.jpg";
+import smallHeaderBackground from "../../images/imageAbout-pequena.jpg";
+import mediumHeaderBackground from "../../images/imageAbout-media.jpg";
+import bigHeaderBackground from "../../images/imageAbout-larga.jpg";
 
 export const Header = styled(motion.header)`
   z-index: 1000;
   position: relative;
-  background: linear-gradient(
-      135deg,
-      ${(props) => props.theme.gradients.cor1Gradient},
-      ${(props) => props.theme.gradients.cor2Gradient}
-    ),
-    url(${BackgroundHeader});
   background-size: cover;
   background-position: center;
   min-height: 50vw;
@@ -23,16 +19,38 @@ export const Header = styled(motion.header)`
     min-height: 100%;
     width: 100%;
     overflow-x: hidden !important;
+
+    background: linear-gradient(
+        135deg,
+        ${(props) => props.theme.gradients.cor1Gradient},
+        ${(props) => props.theme.gradients.cor2Gradient}
+      ),
+      url(${smallHeaderBackground});
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
     min-height: 100%;
     width: 100%;
     overflow-x: hidden !important;
+    background: linear-gradient(
+        135deg,
+        ${(props) => props.theme.gradients.cor1Gradient},
+        ${(props) => props.theme.gradients.cor2Gradient}
+      ),
+      url(${mediumHeaderBackground});
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletLandscapeUp}) {
     min-height: 100vh;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakPoints.desktopUp}) {
+    background: linear-gradient(
+        135deg,
+        ${(props) => props.theme.gradients.cor1Gradient},
+        ${(props) => props.theme.gradients.cor2Gradient}
+      ),
+      url(${bigHeaderBackground});
   }
 `;
 
@@ -261,6 +279,10 @@ export const InitialBox = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5rem;
+
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    padding: 4rem;
+  }
 `;
 
 export const InitialBoxCard = styled.div`

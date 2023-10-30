@@ -21,7 +21,11 @@ function Project({ project, onClick }) {
   return (
     <ProjectBox whileInView="hover" initial="initial" variants={variants}>
       <div className="section-projects__box">
-        <ProjectImage src={project.imageUrl} alt={project.title} />
+        <ProjectImage
+          srcSet={project.srcSet}
+          src={project.imageUrl}
+          alt={project.title}
+        />
         <ProjectText>{project.title}</ProjectText>
 
         <Button
@@ -33,7 +37,7 @@ function Project({ project, onClick }) {
           <img
             className="card__social-icons about--icon"
             src={GithubIcon}
-            alt=""
+            alt={`icon-link ${project.githubLink}`}
           />
         </Button>
       </div>
@@ -43,6 +47,7 @@ function Project({ project, onClick }) {
 
 Project.propTypes = {
   project: PropTypes.shape({
+    srcSet: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     githubLink: PropTypes.string.isRequired,

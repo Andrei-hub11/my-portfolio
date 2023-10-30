@@ -66,7 +66,7 @@ export const ContactImage = styled.div`
     theme: {
       images: { form },
     },
-  }) => `url(${form})`};
+  }) => `url(${form[1]})`};
   background-size: cover;
   background-position: center;
   top: 0;
@@ -78,16 +78,31 @@ export const ContactImage = styled.div`
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
     width: 10rem;
     height: 10rem;
+    background-image: ${({
+      theme: {
+        images: { form },
+      },
+    }) => `url(${form[0]})`};
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
     width: 13rem;
     height: 13rem;
+    background-image: ${({
+      theme: {
+        images: { form },
+      },
+    }) => `url(${form[0]})`};
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.desktopUp}) {
     width: 15rem;
     height: 15rem;
+    background-image: ${({
+      theme: {
+        images: { form },
+      },
+    }) => `url(${form[1]})`};
   }
 `;
 

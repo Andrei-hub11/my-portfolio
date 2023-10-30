@@ -111,6 +111,10 @@ export const ServiceCardTitle = styled.div`
     },
   }) => secundaria};
 
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    height: 4rem;
+  }
+
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
     font-size: ${({
       theme: {
