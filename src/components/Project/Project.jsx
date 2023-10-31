@@ -20,27 +20,25 @@ function Project({ project, onClick }) {
   };
   return (
     <ProjectBox whileInView="hover" initial="initial" variants={variants}>
-      <div className="section-projects__box">
-        <ProjectImage
-          srcSet={project.srcSet}
-          src={project.imageUrl}
-          alt={project.title}
-        />
-        <ProjectText>{project.title}</ProjectText>
+      <ProjectImage
+        srcSet={project.srcSet}
+        src={project.imageUrl}
+        alt={project.title}
+      />
+      <ProjectText>{project.title}</ProjectText>
 
-        <Button
-          onClick={() => {
-            onClick(project.githubLink);
-          }}
-        >
-          GitHub
-          <img
-            className="card__social-icons about--icon"
-            src={GithubIcon}
-            alt={`icon-link ${project.githubLink}`}
-          />
-        </Button>
-      </div>
+      <Button
+        onClick={() => {
+          onClick(project.githubLink);
+        }}
+      >
+        GitHub
+        <img
+          className="card__social-icons about--icon"
+          src={GithubIcon}
+          alt={`icon-link ${project.githubLink}`}
+        />
+      </Button>
     </ProjectBox>
   );
 }

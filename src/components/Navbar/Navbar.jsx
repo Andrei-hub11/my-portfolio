@@ -29,7 +29,7 @@ import {
 
 import SocialIcon from "../SocialIcon/SocialIcon";
 
-import Andrey from "../../images/image-profile.jpg";
+import Andrey from "../../images/image-profile.avif";
 import GmailIcon from "../../images/bxl-gmail.svg";
 import LinkedinIcon from "../../images/bxl-linkedin-square.svg";
 import useRedirect from "../../utils/customHooks/useRedirect";

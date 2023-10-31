@@ -1,8 +1,8 @@
-import contactImageLight_media from "../../images/imageformContact-corlight-media.jpg";
-import contactImageLight_pequena from "../../images/imageformContact-corlight-pequena.jpg";
+import contactImageLight_media from "../../images/imageformContact-corlight-media.avif";
+import contactImageLight_pequena from "../../images/imageformContact-corlight-pequena.avif";
 
-import contactImageDark_media from "../../images/imageformContact-corblack-media.jpg";
-import contactImageDark_pequena from "../../images/imageformContact-corblack-pequena.jpg";
+import contactImageDark_media from "../../images/imageformContact-corblack-media.avif";
+import contactImageDark_pequena from "../../images/imageformContact-corblack-pequena.avif";
 
 export const lightTheme = {
   colors: {

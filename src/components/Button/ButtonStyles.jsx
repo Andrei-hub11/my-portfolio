@@ -8,7 +8,7 @@ export const Btn = styled.button`
   text-transform: uppercase;
   font-size: 1.6rem;
   font-family: ${({ theme: { fonts } }) => fonts[1]};
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   background: ${({ theme: { colors }, $primary }) =>
     $primary ? colors.btn_primario : colors.btn_secundario};
   color: ${({ theme: { colors }, $primary }) =>

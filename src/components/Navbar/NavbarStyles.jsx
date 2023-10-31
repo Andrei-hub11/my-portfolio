@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-import smallHeaderBackground from "../../images/imageAbout-pequena.jpg";
-import mediumHeaderBackground from "../../images/imageAbout-media.jpg";
-import bigHeaderBackground from "../../images/imageAbout-larga.jpg";
+import smallHeaderBackground from "../../images/imageAbout-pequena.avif";
+import mediumHeaderBackground from "../../images/imageAbout-media.avif";
+import bigHeaderBackground from "../../images/imageAbout-larga.avif";
 
 export const Header = styled(motion.header)`
   z-index: 1000;

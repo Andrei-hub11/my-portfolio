@@ -9,7 +9,7 @@ import {
   MainBox,
 } from "./AboutStyle";
 
-import aboutImage from "../../images/cardImage-.png";
+import aboutImage from "../../images/cardImage.avif";
 import DownloadIcon from "../../images/download.svg";
 import Button from "../Button/Button";
 import pdf from "../../utils/curriculo.pdf";
