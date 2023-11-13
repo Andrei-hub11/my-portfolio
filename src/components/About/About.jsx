@@ -9,7 +9,7 @@ import {
   MainBox,
 } from "./AboutStyle";
 
-import aboutImage from "../../images/cardImage.avif";
+import aboutImage from "../../images/cardImage.webp";
 import DownloadIcon from "../../images/download.svg";
 import Button from "../Button/Button";
 import pdf from "../../utils/curriculo.pdf";
@@ -64,7 +64,12 @@ function About() {
           initial="initial"
           variants={variantPrimaryAbout}
         >
-          <AboutImage src={aboutImage} alt="imagem-sobre" />
+          <AboutImage
+            src={aboutImage}
+            alt="imagem-sobre"
+            width="300"
+            height="300"
+          />
         </AboutBoxPrimary>
 
         <AboutBoxSecondary
@@ -85,7 +90,13 @@ function About() {
             para criar algo incrível!
           </AboutTextStory>
           <Button onClick={handleDownloadPDF} $primary={true}>
-            Download CV <AboutIcon src={DownloadIcon} />
+            Download CV{" "}
+            <AboutIcon
+              src={DownloadIcon}
+              alt="downloadCv-icon"
+              width="10"
+              height="10"
+            />
           </Button>
         </AboutBoxSecondary>
       </MainBox>

@@ -26,7 +26,7 @@ export const MainBox = styled.div`
     max-width: 35rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 1.5rem;
   }
 
@@ -130,6 +130,8 @@ export const AboutTextStory = styled.p`
   line-height: 1.8rem;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    margin: 0 auto;
+    width: 90%;
     margin-top: 1rem;
     font-size: ${({
       theme: {

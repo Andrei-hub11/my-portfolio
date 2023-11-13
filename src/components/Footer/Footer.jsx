@@ -48,6 +48,8 @@ function Footer() {
               onClick={() =>
                 handleRedirect("mailto:andreirodrigues794@gmail.com")
               }
+              width="10"
+              height="10"
             />
           </li>
           <li>
@@ -59,6 +61,8 @@ function Footer() {
                   "https://www.linkedin.com/in/andrei-rodrigues-a7949120b/"
                 )
               }
+              width="10"
+              height="10"
             />
           </li>
         </SocialMedia>

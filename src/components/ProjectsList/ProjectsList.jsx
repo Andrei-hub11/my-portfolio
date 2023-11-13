@@ -8,12 +8,12 @@ import {
 
 const Project = lazy(() => import("../Project/Project"));
 
-import Project1 from "../../images/project-image-1.avif";
-import Project1_mediumImg from "../../images/project-image-1-media.avif";
-import Project2 from "../../images/project-image-2.avif";
-import Project2_mediumImg from "../../images/project-image-2-media.avif";
-import Project3 from "../../images/project-image-3.avif";
-import Project3_mediumImg from "../../images/project-image-3-media.avif";
+import Project1 from "../../images/project-image-1.webp";
+import Project1_mediumImg from "../../images/project-image-1-media.webp";
+import Project2 from "../../images/project-image-2.webp";
+import Project2_mediumImg from "../../images/project-image-2-media.webp";
+import Project3 from "../../images/project-image-3.webp";
+import Project3_mediumImg from "../../images/project-image-3-media.webp";
 import useRedirect from "../../utils/customHooks/useRedirect";
 
 const projectsData = [

@@ -124,8 +124,9 @@ export const ContactForm = styled.form`
   }) => principal};
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    height: 45rem;
-    width: 35rem;
+    row-gap: 1rem;
+    height: 40rem;
+    width: 26rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
@@ -151,7 +152,7 @@ export const FormControl = styled.div`
   flex-direction: column;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    top: 3rem;
+    top: 1rem;
     padding: 1rem 0;
   }
 `;
@@ -197,7 +198,7 @@ export const FormInput = styled.input`
         fontSize: { sPhone },
       },
     }) => `${sPhone[0]}rem`};
-    width: 28rem;
+    width: 22rem;
     height: 3rem;
     padding-left: 1rem;
   }
@@ -349,8 +350,8 @@ export const Textarea = styled.textarea`
         fontSize: { sPhone },
       },
     }) => `${sPhone[0]}rem`};
-    height: 15rem;
-    width: 28rem;
+    height: 10rem;
+    width: 22rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {

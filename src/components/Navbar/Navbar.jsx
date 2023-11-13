@@ -29,7 +29,7 @@ import {
 
 import SocialIcon from "../SocialIcon/SocialIcon";
 
-import Andrey from "../../images/image-profile.avif";
+import Andrey from "../../images/image-profile.webp";
 import GmailIcon from "../../images/bxl-gmail.svg";
 import LinkedinIcon from "../../images/bxl-linkedin-square.svg";
 import useRedirect from "../../utils/customHooks/useRedirect";
@@ -103,7 +103,11 @@ function Navbar({ onClick }) {
               smooth={true}
               duration={100}
             >
-              <NavLink href={l.text} key={l.id}>
+              <NavLink
+                href={l.text}
+                key={l.id}
+                onClick={() => setIsOpen(false)}
+              >
                 {l.text}
               </NavLink>
             </Link>
@@ -139,6 +143,8 @@ function Navbar({ onClick }) {
                 onClick={() =>
                   handleRedirect("mailto:andreirodrigues794@gmail.com")
                 }
+                width="10"
+                height="10"
               />
 
               <SocialIcon
@@ -150,6 +156,8 @@ function Navbar({ onClick }) {
                     "https://www.linkedin.com/in/andrei-rodrigues-a7949120b/"
                   )
                 }
+                width="10"
+                height="10"
               />
             </CardSocial>
           </CardInfo>

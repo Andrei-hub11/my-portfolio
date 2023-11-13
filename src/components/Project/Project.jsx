@@ -37,6 +37,8 @@ function Project({ project, onClick }) {
           className="card__social-icons about--icon"
           src={GithubIcon}
           alt={`icon-link ${project.githubLink}`}
+          width="10"
+          height="10"
         />
       </Button>
     </ProjectBox>

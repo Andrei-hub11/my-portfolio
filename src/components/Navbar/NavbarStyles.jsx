@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
-import smallHeaderBackground from "../../images/imageAbout-pequena.avif";
-import mediumHeaderBackground from "../../images/imageAbout-media.avif";
-import bigHeaderBackground from "../../images/imageAbout-larga.avif";
+import smallHeaderBackground from "../../images/imageAbout-pequena.webp";
+import mediumHeaderBackground from "../../images/imageAbout-media.webp";
+import bigHeaderBackground from "../../images/imageAbout-larga.webp";
 
 export const Header = styled(motion.header)`
   z-index: 1000;
@@ -40,11 +40,8 @@ export const Header = styled(motion.header)`
       url(${mediumHeaderBackground});
   }
 
-  @media (min-width: ${(props) => props.theme.breakPoints.tabletLandscapeUp}) {
-    min-height: 100vh;
-  }
-
   @media (min-width: ${(props) => props.theme.breakPoints.desktopUp}) {
+    min-height: 100vh;
     background: linear-gradient(
         135deg,
         ${(props) => props.theme.gradients.cor1Gradient},
@@ -74,7 +71,7 @@ export const NavBar = styled.nav`
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
     position: absolute;
     top: 0;
-    right: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
+    right: ${({ $isOpen }) => ($isOpen ? "0" : "-200%")};
     height: 100%;
     width: 300px;
     flex-direction: column;
@@ -342,15 +339,18 @@ export const InitialBoxCardImg = styled.div`
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
     width: 100%;
     height: 10rem;
+    border-radius: 0 0 7rem 0;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
     width: 100%;
     height: 14rem;
+    border-radius: 0 0 7rem 0;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.tabletPortraitUp}) {
     height: 15rem;
+    border-radius: 0 0 10rem 0;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.bigDesktopUp}) {

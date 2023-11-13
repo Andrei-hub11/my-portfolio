@@ -97,7 +97,12 @@ function Services() {
                 {service.features.map((feature) => {
                   return (
                     <ServiceCardListContainer key={feature}>
-                      <ServiceCardIcon src={FeatureIcon} />
+                      <ServiceCardIcon
+                        src={FeatureIcon}
+                        alt="feature-icon"
+                        width="10"
+                        height="10"
+                      />
 
                       <ServiceCardDescription>{feature}</ServiceCardDescription>
                     </ServiceCardListContainer>

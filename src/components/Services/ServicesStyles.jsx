@@ -78,7 +78,7 @@ export const ServiceCard = styled(motion.div)`
   width: 30rem;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
-    width: 27rem;
+    width: 24rem;
   }
 
   @media (min-width: ${(props) => props.theme.breakPoints.phoneOnly}) {
@@ -233,6 +233,10 @@ export const ServiceCardDescription = styled.p`
   }) => clara};
   font-size: 1.2rem;
   word-break: all;
+
+  @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
+    word-break: break-all;
+  }
 
   @media (min-width: ${(props) => props.theme.breakPoints.desktopUp}) {
     font-size: ${({

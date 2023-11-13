@@ -45,7 +45,12 @@ function ScrollToTop() {
       variants={variants}
       onClick={scrollToTop}
     >
-      <SocialIcon src={ArrowIcon} />
+      <SocialIcon
+        src={ArrowIcon}
+        alt="scrollToTop-icon"
+        width="10"
+        height="10"
+      />
     </ScrollToTopButton>
   );
 }
