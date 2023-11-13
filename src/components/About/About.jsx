@@ -90,13 +90,8 @@ function About() {
             para criar algo incrível!
           </AboutTextStory>
           <Button onClick={handleDownloadPDF} $primary={true}>
-            Download CV{" "}
-            <AboutIcon
-              src={DownloadIcon}
-              alt="downloadCv-icon"
-              width="10"
-              height="10"
-            />
+            Download CV
+            <AboutIcon src={DownloadIcon} alt="downloadCv-icon" />
           </Button>
         </AboutBoxSecondary>
       </MainBox>

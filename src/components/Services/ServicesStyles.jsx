@@ -176,6 +176,7 @@ export const ServiceCardIcon = styled.img`
       iconColors: { lightSecundaria },
     },
   }) => lightSecundaria};
+  cursor: pointer;
 
   @media (max-width: ${(props) => props.theme.breakPoints.smallerPhone}) {
     height: 1.7rem;

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { ProjectBox, ProjectImage, ProjectText } from "./ProjectStyle";
 import Button from "../Button/Button";
 import GithubIcon from "../../images/bxl-github.svg";
+import SocialIcon from "../SocialIcon/SocialIcon";
 
 function Project({ project, onClick }) {
   const variants = {
@@ -33,12 +34,11 @@ function Project({ project, onClick }) {
         }}
       >
         GitHub
-        <img
-          className="card__social-icons about--icon"
+        <SocialIcon
           src={GithubIcon}
           alt={`icon-link ${project.githubLink}`}
-          width="10"
-          height="10"
+          width="15"
+          height="15"
         />
       </Button>
     </ProjectBox>
